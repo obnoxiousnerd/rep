@@ -1,0 +1,35 @@
+generate:
+  school_name: Imaginary School
+  exam_name: Sample Test
+  authority:
+    signature_image: ./data/signature.png
+    name: John Doe
+    designation: Class Teacher
+
+  subjects:
+    # Specify the subjects and the maximum marks possible for the project.
+    Math: 80
+    Chemistry: 70
+    Physics: 70
+    English: 80
+    CS: 70
+    Biology: 70
+
+  output:
+    # This path is relative to the project root folder, not the config folder.
+    folder: ./out
+    filename_format: '{{ RollNo }}-{{ Name }}.pdf'
+
+  data:
+    csv:
+      file_path: ./data/students.csv
+    mysql:
+      host: localhost # Default is localhost
+      port: 3306 # Default is 3306
+      database: students
+      table: details
+      username: root
+
+  template:
+    pdf: ./template/pdf.jinja
+    email: ./template/email.jinja
