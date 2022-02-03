@@ -1,9 +1,10 @@
-Dear {{ name }},
+Dear {{ student["Name"] }},
 <br />
 Please find your report card for {{ exam }} attached in this email.
 <br />
 Thank you.
 <br />
-{{ authority["name"] }} <br />
-{{ authority["designation"] }} <br />
-{{ school }}
+<br />
+{{ config["generate"]["authority"]["name"] }} <br />
+{{ config["generate"]["authority"]["designation"] }} <br />
+{{ config["generate"]["school"] }}

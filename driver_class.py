@@ -83,3 +83,12 @@ class Renderer(GenericDriver):
 
     def render(self, data):
         pass
+
+class EmailDriver(GenericDriver):
+    """
+    EmailDriver is a generic base class for all driver classes that send the
+    rendered data to the email address.
+    """
+
+    def send(self, data):
+        pass

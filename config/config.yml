@@ -30,6 +30,16 @@ generate:
       table: details
       username: root
 
-  template:
-    pdf: ./template/pdf.jinja
-    email: ./template/email.jinja
+  template: ./template/pdf.jinja
+
+email:
+  smtp:
+    server: localhost
+    port: 1025
+    username: repcli
+    sender: me@localhost
+  cc: # Optional
+    - 1@localhost
+    - 2@localhost
+
+  template: ./template/email.jinja

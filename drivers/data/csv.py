@@ -17,7 +17,7 @@ class CSVDataDriver(DataDriver):
         else:
             normalized_path = path.join("config", *path.split(file_path))
             self.logger.info(f"Reading data from {normalized_path}")
-            file = open(normalized_path, "r")
-            data = list(csv.DictReader(file))
-            self.logger.info("Fetched data from file")
-            return data
+            with open(normalized_path, "r") as file:
+                data = list(csv.DictReader(file))
+                self.logger.info("Fetched data from file")
+                return data

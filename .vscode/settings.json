@@ -1,0 +1,19 @@
+{
+  "sqltools.connections": [
+    {
+      "mysqlOptions": {
+        "authProtocol": "default"
+      },
+      "previewLimit": 50,
+      "server": "localhost",
+      "port": 3306,
+      "driver": "MySQL",
+      "name": "Project DB",
+      "database": "students",
+      "username": "root",
+      "password": "12345678"
+    }
+  ],
+  "python.analysis.typeCheckingMode": "basic",
+  "cSpell.words": ["pipenv"]
+}

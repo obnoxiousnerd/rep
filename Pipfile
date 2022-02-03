@@ -8,7 +8,6 @@ click = "*"
 pyyaml = "*"
 jinja2 = "*"
 mysql-connector-python = "*"
-pyppeteer = "*"
 colorama = "*"
 playwright = "*"
 

@@ -16,12 +16,22 @@ main_logger.setLevel(logging.DEBUG)
 
 @click.group(invoke_without_command=True)
 @click.pass_context
-def cli(ctx: click.Context):
-    if ctx.invoked_subcommand is None:
-        print(Fore.CYAN + "This is rep." + Fore.RESET)
+@click.option(
+    "--source", default="csv", help="Specify the source to load the data into the CLI."
+)
+@click.option(
+    "--email-method",
+    help="Specify the email method to use for sending the email."
+    + " Emails won't be sent if this is not specified.",
+)
+def cli(_, source, email_method):
+    """
+    This is rep.
+    rep is a CLI for generating PDFs and sending them via email.
+    """
+    if _.invoked_subcommand is None:
+        generate(source, email_method)
 
-
-cli.add_command(generate)
 
 if __name__ == "__main__":
     try:
