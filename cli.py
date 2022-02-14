@@ -27,7 +27,7 @@ main_logger.setLevel(logging.DEBUG)
 def cli(_, source, email_method):
     """
     This is rep.
-    rep is a CLI for generating PDFs and sending them via email.
+    rep is a CLI for generating PDFs of report cards and sending them via email.
     """
     if _.invoked_subcommand is None:
         generate(source, email_method)
